@@ -1,10 +1,12 @@
 ---
 include:
   - board: nice_nano_v2
-    shield: eyelash_sofle_left nice_view
+    # 左手側：競合するnice_viewを完全に削除。キーボード本体の定義だけで通常表示が動きます。
+    shield: eyelash_sofle_left
     snippet: studio-rpc-usb-uart
     cmake-args: -DCONFIG_ZMK_STUDIO=y -DCONFIG_ZMK_STUDIO_LOCKING=n
   - board: nice_nano_v2
-    shield: eyelash_sofle_right nice_view_adapter nice_view_custom #custom shield
+    # 右手側：競合するadapterを削除し、カスタム画面（nice_view_custom）だけを重ねます。
+    shield: eyelash_sofle_right nice_view_custom
   - board: nice_nano_v2
     shield: settings_reset
