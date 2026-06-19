@@ -10,15 +10,15 @@ manifest:
       # - https://docs.zephyrproject.org/3.5.0/develop/west/manifest.html#projects
   #  - name: gpeye
   #    url-base: https://github.com/GPeye
-      - name: mqdl                         #new entry
-      url-base: https://github.com/mqdl  #new entry
+    - name: mqdl                              #new entry
+      url-base: https://github.com/mqdl       #new entry
   projects:
     # - name: mario-peripheral-animation
     #   remote: gpeye
     #    revision: main
-      - name: nice-view-mod   #new entry
-      remote: mqdl                       #new entry
-      revision: main                      #new entry
+    - name: nice-view-mod                   #new entry
+      remote: mqdl                          #new entry
+      revision: main                        #new entry
     - name: eyelash_sofle
       url: https://github.com/a741725193/zmk-sofle
       revision: main
