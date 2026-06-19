@@ -123,6 +123,21 @@
             bindings = <&kp JP_TILDE>;
             key-positions = <10 11>;
         };
+
+        f7 {
+            bindings = <&kp F7>;
+            key-positions = <7 8>;
+        };
+
+        f10 {
+            bindings = <&kp F10>;
+            key-positions = <9 10 11>;
+        };
+
+        enter {
+            bindings = <&kp ENTER>;
+            key-positions = <24 25>;
+        };
     };
 
     macros {
