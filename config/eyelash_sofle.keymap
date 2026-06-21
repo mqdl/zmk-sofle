@@ -138,6 +138,11 @@
             bindings = <&kp ENTER>;
             key-positions = <24 25>;
         };
+
+        ecs {
+            bindings = <&kp ESC>;
+            key-positions = <0 1>;
+        };
     };
 
     macros {
@@ -162,20 +167,20 @@
 
         layer0 {
             bindings = <
-&lt 4 ESC   &kp N1        &kp N2        &kp N3  &kp N4       &kp N5              &mkp MB5   &kp N6          &kp N7       &kp N8     &kp N9    &kp N0        &kp BACKSPACE
-&kp TAB     &kp Q         &kp W         &kp E   &kp R        &kp T               &mkp MB4   &kp Y           &kp U        &kp I      &kp O     &kp P         &kp JP_LBRACKET
-&kp LSHFT   &kp A         &kp S         &kp D   &kp F        &kp G               &mkp MCLK  &kp H           &kp J        &kp K      &kp L     &kp ENTER     &mt LEFT_SHIFT JP_RBRACKET
-&kp LCTRL   &kp Z         &kp X         &kp C   &kp V        &kp B               &mkp RCLK  &kp N           &kp M        &kp COMMA  &kp DOT   &kp SLASH     &mt LEFT_CONTROL JP_BSLH
-&kp C_MUTE  &kp LEFT_ALT  &kp LEFT_GUI  &mo 3   &lt 1 SPACE  &kp INT_MUHENKAN    &mkp LCLK  &kp INT_HENKAN  &lt 1 SPACE  &kp MINUS  &kp SEMI  &kp JP_COLON
+&lt 4 N1    &kp N2        &kp N3        &kp N4            &kp N5         &kp N6              &mkp MB5    &kp N7          &kp N8          &kp N9          &kp N0       &kp MINUS     &lt 4 JP_CARET
+&kp TAB     &kp Q         &kp W         &kp E             &kp R          &kp T               &mkp MB4    &kp Y           &kp U           &kp I           &kp O        &kp P         &kp JP_LBRACKET
+&kp LSHFT   &kp A         &kp S         &kp D             &kp F          &kp G               &mkp MCLK   &kp H           &kp J           &kp K           &kp L        &kp ENTER     &mt LEFT_SHIFT JP_RBRACKET
+&kp LCTRL   &kp Z         &kp X         &kp C             &kp V          &kp B               &mkp RCLK   &kp N           &kp M           &kp COMMA       &kp DOT      &kp SLASH     &mt LEFT_CONTROL JP_BSLH
+&kp C_MUTE  &kp LEFT_ALT  &mo 3         &kp INT_MUHENKAN  &lt 1 SPACE    &kp LSHFT           &mkp LCLK   &kp ENTER       &lt 1 SPACE     &kp INT_HENKAN  &kp SEMI   &kp JP_COLON
             >;
 
             sensor-bindings = <&scroll_encoder>;
-            display-name = "LAYER0";
+            display-name = "QWERTY";
         };
 
         layer_1 {
             bindings = <
-&trans  &trans  &trans  &trans  &trans  &trans    &trans  &trans     &trans      &trans    &trans     &kp JP_CARET  &kp DEL
+&trans  &trans  &trans  &trans  &trans  &trans    &trans  &trans     &trans      &trans    &trans     &trans        &kp DEL
 &trans  &trans  &trans  &trans  &trans  &trans    &trans  &trans     &trans      &kp UP    &trans     &trans        &trans
 &trans  &trans  &trans  &trans  &trans  &trans    &trans  &trans     &kp LEFT    &kp DOWN  &kp RIGHT  &trans        &trans
 &trans  &trans  &trans  &trans  &trans  &trans    &trans  &kp JP_AT  &kp JP_YEN  &trans    &trans     &trans        &trans
@@ -201,11 +206,11 @@
 
         layer_3 {
             bindings = <
-&trans  &kp F1      &kp F2      &kp F3      &kp F4      &kp F5        &trans  &kp F6      &kp F7      &kp F8      &kp F9      &kp F10      &kp F11
-&trans  &kp LS(F1)  &kp LS(F2)  &kp LS(F3)  &kp LS(F4)  &kp LS(F5)    &trans  &kp LS(F6)  &kp LS(F7)  &kp LS(F8)  &kp LS(F9)  &kp LS(F10)  &kp F12
-&trans  &kp LC(F1)  &kp LC(F2)  &kp LC(F3)  &kp LC(F4)  &kp LC(F5)    &trans  &kp LC(F6)  &kp LC(F7)  &kp LC(F8)  &kp LC(F9)  &kp LC(F10)  &trans
-&trans  &trans      &trans      &trans      &trans      &trans        &trans  &trans      &trans      &trans      &trans      &trans       &trans
-&trans  &trans      &trans      &trans      &trans      &trans        &trans  &trans      &trans      &trans      &trans      &trans
+&kp F1      &kp F2         &kp F3      &kp F4      &kp F5        &kp F6      &trans        &kp F7      &kp F8      &kp F9      &kp F10      &kp F11      &kp F12
+&kp LS(F1)  &kp LS(F2)     &kp LS(F3)  &kp LS(F4)  &kp LS(F5)    &kp LS(F6)  &trans        &kp LS(F7)  &kp LS(F8)  &kp LS(F9)  &kp LS(F10)  &kp LS(F11)  &kp LS(F12)
+&kp LC(F1)  &kp LC(F2)     &kp LC(F3)  &kp LC(F4)  &kp LC(F5)    &kp LC(F6)  &trans        &kp LC(F7)  &kp LC(F8)  &kp LC(F9)  &kp LC(F10)  &kp LC(F11)  &kp LC(F12)
+&trans      &trans         &trans      &trans      &trans        &trans      &trans      &trans      &trans      &trans      &trans       &trans
+&trans      &LEFT_GUI      &trans      &trans      &trans        &trans      &trans      &trans      &trans      &trans      &trans       &trans
             >;
 
             display-name = "FUNC";
@@ -214,11 +219,11 @@
 
         layer_4 {
             bindings = <
-&trans  &bt BT_SEL 0     &bt BT_SEL 1    &bt BT_SEL 2     &bt BT_SEL 3     &bt BT_SEL 4       &mmv MOVE_UP     &trans           &trans           &mkp MCLK        &trans           &trans           &rgb_ug RGB_COLOR_HSB(0,0,20)
-&trans  &bt BT_CLR       &bt BT_CLR_ALL  &trans           &trans           &trans             &mmv MOVE_DOWN   &trans           &mkp LCLK        &mmv MOVE_UP     &mkp RCLK        &trans           &trans
-&trans  &out OUT_USB     &out OUT_BLE    &trans           &trans           &trans             &mmv MOVE_LEFT   &trans           &mmv MOVE_LEFT   &mmv MOVE_DOWN   &mmv MOVE_RIGHT  &trans           &trans
-&trans  &rgb_ug RGB_OFF  &rgb_ug RGB_ON  &rgb_ug RGB_EFF  &rgb_ug RGB_EFR  &rgb_ug RGB_SPI    &mmv MOVE_RIGHT  &rgb_ug RGB_BRI  &rgb_ug RGB_BRD  &rgb_ug RGB_HUI  &rgb_ug RGB_HUD  &rgb_ug RGB_SAI  &rgb_ug RGB_SAD
-&trans  &trans           &trans          &trans           &trans           &trans             &mkp LCLK        &trans           &trans           &trans           &trans           &trans
+&trans           &bt BT_SEL 0     &bt BT_SEL 1     &bt BT_SEL 2     &bt BT_SEL 3     &bt BT_SEL 4       &mmv MOVE_UP     &trans           &trans           &mkp MCLK        &trans           &trans           &trans
+&trans           &bt BT_CLR       &bt BT_CLR_ALL  &trans            &trans           &trans             &mmv MOVE_DOWN   &trans           &mkp LCLK        &mmv MOVE_UP     &mkp RCLK        &trans           &trans
+&trans           &out OUT_USB     &out OUT_BLE    &trans            &trans           &trans             &mmv MOVE_LEFT   &trans           &mmv MOVE_LEFT   &mmv MOVE_DOWN   &mmv MOVE_RIGHT  &trans           &trans
+&trans           &rgb_ug RGB_OFF  &rgb_ug RGB_ON  &rgb_ug RGB_EFF   &rgb_ug RGB_EFR  &rgb_ug RGB_SPI    &mmv MOVE_RIGHT  &rgb_ug RGB_BRI  &rgb_ug RGB_BRD  &rgb_ug RGB_HUI  &rgb_ug RGB_HUD  &rgb_ug RGB_SAI  &rgb_ug RGB_SAD
+&trans           &trans           &trans          &trans            &trans           &trans             &mkp LCLK        &trans           &trans           &trans           &trans           &trans
             >;
 
             display-name = "BT";
