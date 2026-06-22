@@ -340,11 +340,9 @@ combos:
   k: $$mdi:keyboard-tab$$
 - p: [18, 17]
   k: $$mdi:keyboard-tab-reverse$$
-- p: [10, 11]
-  k: +
 - p: [7, 8]
   k: F7
-- p: [9, 10, 11]
+- p: [9, 10]
   k: F10
 - p: [24, 25]
   k: {t: '$$mdi:keyboard-return$$', type: enter}
@@ -352,3 +350,7 @@ combos:
   k: {t: '$$mdi:backspace$$', type: backspace}
 - p: [0, 1]
   k: $$mdi:keyboard-esc$$
+- p: [8, 9]
+  k: F8
+- p: [33, 46]
+  k: $$mdi:backspace-reverse-outline$$
