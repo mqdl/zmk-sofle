@@ -229,7 +229,7 @@
 
         layer_4 {
             bindings = <
-&trans  &bt BT_SEL 0     &bt BT_SEL 1    &bt BT_SEL 2     &bt BT_SEL 3     &bt BT_SEL 4       &mmv MOVE_UP     &kp K_LOCK       &trans           &mkp MCLK        &trans           &trans           &rgb_ug RGB_COLOR_HSB(0,0,4)
+&trans  &bt BT_SEL 0     &bt BT_SEL 1    &bt BT_SEL 2     &bt BT_SEL 3     &bt BT_SEL 4       &mmv MOVE_UP     &&kp LG(L)       &trans           &mkp MCLK        &trans           &trans           &rgb_ug RGB_COLOR_HSB(0,0,4)
 &trans  &bt BT_CLR       &bt BT_CLR_ALL  &trans           &trans           &trans             &mmv MOVE_DOWN   &trans           &mkp LCLK        &mmv MOVE_UP     &mkp RCLK        &trans           &trans
 &trans  &out OUT_USB     &out OUT_BLE    &trans           &trans           &trans             &mmv MOVE_LEFT   &trans           &mmv MOVE_LEFT   &mmv MOVE_DOWN   &mmv MOVE_RIGHT  &trans           &trans
 &trans  &rgb_ug RGB_OFF  &rgb_ug RGB_ON  &rgb_ug RGB_EFF  &rgb_ug RGB_EFR  &rgb_ug RGB_SPI    &mmv MOVE_RIGHT  &rgb_ug RGB_BRI  &rgb_ug RGB_BRD  &rgb_ug RGB_HUI  &rgb_ug RGB_HUD  &rgb_ug RGB_SAI  &rgb_ug RGB_SAD
