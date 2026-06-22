@@ -194,7 +194,7 @@ layers:
   - {t: '$$mdi:transfer$$', type: trans}
   - {t: '$$mdi:transfer$$', type: trans}
   - ':'
-  - {t: '$$mdi:transfer$$', type: trans}
+  - '"'
   FUNC:
   - F1
   - F2
