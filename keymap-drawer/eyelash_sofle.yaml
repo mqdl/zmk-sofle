@@ -348,7 +348,7 @@ combos:
   k: F10
 - p: [24, 25]
   k: {t: '$$mdi:keyboard-return$$', type: enter}
-- p: [0, 1]
-  k: $$mdi:keyboard-esc$$
 - p: [12, 11]
   k: {t: '$$mdi:backspace$$', type: backspace}
+- p: [0, 1]
+  k: $$mdi:keyboard-esc$$
