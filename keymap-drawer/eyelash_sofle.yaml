@@ -1,19 +1,19 @@
 layout: {zmk_keyboard: eyelash_sofle}
 layers:
   QWERTY:
-  - {t: '1', h: BT, s: '!'}
+  - {t: '=', h: BT, s: +}
+  - {t: '1', s: '!'}
   - {t: '2', s: '@'}
   - {t: '3', s: '#'}
   - {t: '4', s: $}
   - {t: '5', s: '%'}
-  - {t: '6', s: ^}
   - '&mkp MB5'
+  - {t: '6', s: ^}
   - {t: '7', s: '&'}
   - {t: '8', s: '*'}
   - {t: '9', s: (}
   - {t: '0', s: )}
   - {t: '-', s: _}
-  - {t: '=', s: +}
   - $$mdi:keyboard-tab$$
   - Q
   - W
@@ -138,6 +138,7 @@ layers:
   - {t: '$$mdi:transfer$$', type: trans}
   - {t: '$$mdi:transfer$$', type: trans}
   - {t: '$$mdi:transfer$$', type: trans}
+  - {t: '$$mdi:transfer$$', type: trans}
   - {t: '7', s: '&'}
   - {t: '8', s: '*'}
   - {t: '9', s: (}
@@ -154,7 +155,7 @@ layers:
   - {t: '4', s: $}
   - {t: '5', s: '%'}
   - {t: '6', s: ^}
-  - {t: /, s: '?'}
+  - {t: '$$mdi:transfer$$', type: trans}
   - {t: '$$mdi:transfer$$', type: trans}
   - {t: '$$mdi:transfer$$', type: trans}
   - {t: '$$mdi:transfer$$', type: trans}
@@ -167,7 +168,7 @@ layers:
   - {t: '1', s: '!'}
   - {t: '2', s: '@'}
   - {t: '3', s: '#'}
-  - '"'
+  - {t: '$$mdi:transfer$$', type: trans}
   - {t: '$$mdi:transfer$$', type: trans}
   - {t: '$$mdi:transfer$$', type: trans}
   - {t: '$$mdi:transfer$$', type: trans}
@@ -180,7 +181,6 @@ layers:
   - {t: ., s: '>'}
   - {t: '0', s: )}
   - {t: ',', s: <}
-  - {t: '-', s: _}
   - {t: '$$mdi:transfer$$', type: trans}
   - {t: '$$mdi:transfer$$', type: trans}
   - {t: '$$mdi:transfer$$', type: trans}
@@ -196,45 +196,45 @@ layers:
   - ':'
   - '"'
   FUNC:
+  - {t: '$$mdi:transfer$$', type: trans}
   - F1
   - F2
   - F3
   - F4
   - F5
-  - F6
   - {t: '$$mdi:transfer$$', type: trans}
+  - F6
   - F7
   - F8
   - F9
   - F10
   - F11
-  - F12
+  - {t: '$$mdi:transfer$$', type: trans}
   - Sft+F1
   - Sft+F2
   - Sft+F3
   - Sft+F4
   - Sft+F5
-  - Sft+F6
   - {t: '$$mdi:transfer$$', type: trans}
+  - Sft+F6
   - Sft+F7
   - Sft+F8
   - Sft+F9
   - Sft+F10
-  - Sft+F11
-  - Sft+F12
+  - F12
+  - {t: '$$mdi:transfer$$', type: trans}
   - Ctl+F1
   - Ctl+F2
   - Ctl+F3
   - Ctl+F4
   - Ctl+F5
-  - Ctl+F6
   - {t: '$$mdi:transfer$$', type: trans}
+  - Ctl+F6
   - Ctl+F7
   - Ctl+F8
   - Ctl+F9
   - Ctl+F10
-  - Ctl+F11
-  - Ctl+F12
+  - {t: '$$mdi:transfer$$', type: trans}
   - {t: '$$mdi:transfer$$', type: trans}
   - {t: '$$mdi:transfer$$', type: trans}
   - {t: '$$mdi:transfer$$', type: trans}
