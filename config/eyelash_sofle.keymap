@@ -89,14 +89,14 @@
             key-positions = <14 28 40>;
         };
 
-        backspace {
-            bindings = <&kp BACKSPACE>;
-            key-positions = <24 23>;
-        };
-
         minus {
             bindings = <&kp MINUS>;
             key-positions = <22 23>;
+        };
+
+        tilde {
+            bindings = <&kp JP_TILDE>;
+            key-positions = <24 23>;
         };
 
         pipe {
