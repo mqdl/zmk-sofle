@@ -328,10 +328,10 @@ layers:
 combos:
 - p: [14, 28, 40]
   k: '&soft_off'
-- p: [24, 23]
-  k: {t: '$$mdi:backspace$$', type: backspace}
 - p: [22, 23]
   k: {t: '-', s: _}
+- p: [24, 23]
+  k: +
 - p: [47, 34]
   k: Sft+0x89
 - p: [3, 4, 5]
