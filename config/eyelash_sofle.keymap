@@ -89,17 +89,6 @@
             key-positions = <14 28 40>;
         };
 
-    macros {
-        // Sleep Windows
-        win_sleep: win_sleep {
-            compatible = "zmk,behavior-macro";
-            #binding-cells = <0>;
-            wait-ms = <50>;
-            tap-ms = <5>;
-            bindings = <&kp LG(X)>, <&kp U>, <&kp S>;
-        };
-    };
-
         minus {
             bindings = <&kp MINUS>;
             key-positions = <22 23>;
