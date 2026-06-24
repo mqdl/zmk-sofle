@@ -342,7 +342,7 @@ combos:
   k: $$mdi:keyboard-tab-reverse$$
 - p: [7, 8]
   k: F7
-- p: [9, 10]
+- p: [10, 11]
   k: F10
 - p: [24, 25]
   k: {t: '$$mdi:keyboard-return$$', type: enter}
