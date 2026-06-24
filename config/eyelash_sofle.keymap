@@ -89,6 +89,17 @@
             key-positions = <14 28 40>;
         };
 
+    macros {
+        // Sleep Windows
+        win_sleep: win_sleep {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            wait-ms = <50>;
+            tap-ms = <5>;
+            bindings = <&kp LG(X)>, <&kp U>, <&kp S>;
+        };
+    };
+
         minus {
             bindings = <&kp MINUS>;
             key-positions = <22 23>;
@@ -177,11 +188,11 @@
 
         layer0 {
             bindings = <
-&lt 4 JP_CARET  &kp N1        &kp N2   &kp N3            &kp N4       &kp N5       &mkp MB5   &kp N6           &kp N7       &kp N8          &kp N9    &kp N0        &kp MINUS     
-&kp TAB         &kp Q         &kp W    &kp E             &kp R        &kp T        &mkp MB4   &kp Y            &kp U        &kp I           &kp O     &kp P         &kp JP_LBRACKET
-&kp LSHFT       &kp A         &kp S    &kp D             &kp F        &kp G        &mkp MCLK  &kp H            &kp J        &kp K           &kp L     &kp ENTER     &mt LEFT_SHIFT JP_RBRACKET
-&kp LCTRL       &kp Z         &kp X    &kp C             &kp V        &kp B        &mkp RCLK  &kp N            &kp M        &kp COMMA       &kp DOT   &kp SLASH     &mt LEFT_CONTROL JP_BSLH
-&kp C_MUTE      &kp LEFT_ALT  &mo 3    &kp INT_MUHENKAN  &lt 1 SPACE  &kp LSHFT    &mkp LCLK  &lt 2 BACKSPACE  &lt 1 SPACE  &kp INT_HENKAN  &kp SEMI  &kp JP_COLON
+&lt 4 JP_CARET  &kp N1        &kp N2          &kp N3            &kp N4       &kp N5       &mkp MB5   &kp N6           &kp N7       &kp N8          &kp N9        &kp N0        &kp MINUS     
+&kp TAB         &kp Q         &kp W           &kp E             &kp R        &kp T        &mkp MB4   &kp Y            &kp U        &kp I           &kp O         &kp P         &kp JP_LBRACKET
+&kp LSHFT       &kp A         &kp S           &kp D             &kp F        &kp G        &mkp MCLK  &kp H            &kp J        &kp K           &kp L         &kp ENTER     &mt LEFT_SHIFT JP_RBRACKET
+&kp LCTRL       &kp Z         &kp X           &kp C             &kp V        &kp B        &mkp RCLK  &kp N            &kp M        &kp COMMA       &kp DOT       &kp SLASH     &mt LEFT_CONTROL JP_BSLH
+&kp C_MUTE      &kp LEFT_ALT  &kp LEFT_GUI    &mo 3             &lt 1 INT5   &kp SPACE    &mkp LCLK  &lt 2 SPACE      &lt 1 INT4   &kp SEMI        &kp JP_COLON  &kp JP_YEN
             >;
 
             sensor-bindings = <&scroll_encoder>;
@@ -207,7 +218,7 @@
 &trans  &trans  &trans  &trans  &trans  &trans        &trans      &kp JP_ASTERISK  &kp N4      &kp N5  &kp N6          &trans        &trans
 &trans  &trans  &trans  &trans  &trans  &trans        &trans      &kp MINUS        &kp N1      &kp N2  &kp N3          &trans        &trans
 &trans  &trans  &trans  &trans  &trans  &trans        &trans      &kp JP_PLUS      &kp COMMA   &kp N0  &kp DOT         &trans        &trans
-&trans  &trans  &trans  &trans  &trans  &trans        &trans      &trans  &trans  &trans  &kp JP_PLUS     &kp JP_ASTERISK
+&trans  &trans  &trans  &trans  &trans  &trans        &trans      &trans  &trans &kp JP_PLUS     &kp JP_ASTERISK &trans 
             >;
 
             display-name = "NUMBER";
@@ -229,7 +240,7 @@
 
         layer_4 {
             bindings = <
-&trans  &bt BT_SEL 0     &bt BT_SEL 1    &bt BT_SEL 2     &bt BT_SEL 3     &bt BT_SEL 4       &mmv MOVE_UP     &kp LG(L)        &trans           &mkp MCLK        &trans           &trans           &kp C_SLEEP
+&trans  &bt BT_SEL 0     &bt BT_SEL 1    &bt BT_SEL 2     &bt BT_SEL 3     &bt BT_SEL 4       &mmv MOVE_UP     &kp LG(L)        &trans           &mkp MCLK        &trans           &trans           &kp C_PWR
 &trans  &bt BT_CLR       &bt BT_CLR_ALL  &trans           &trans           &trans             &mmv MOVE_DOWN   &trans           &mkp LCLK        &mmv MOVE_UP     &mkp RCLK        &trans           &trans
 &trans  &out OUT_USB     &out OUT_BLE    &trans           &trans           &trans             &mmv MOVE_LEFT   &trans           &mmv MOVE_LEFT   &mmv MOVE_DOWN   &mmv MOVE_RIGHT  &trans           &trans
 &trans  &rgb_ug RGB_OFF  &rgb_ug RGB_ON  &rgb_ug RGB_EFF  &rgb_ug RGB_EFR  &rgb_ug RGB_SPI    &mmv MOVE_RIGHT  &rgb_ug RGB_BRI  &rgb_ug RGB_BRD  &rgb_ug RGB_HUI  &rgb_ug RGB_HUD  &rgb_ug RGB_SAI  &rgb_ug RGB_SAD
