@@ -55,16 +55,16 @@ layers:
   - {t: INTERNATIONAL 1, h: '$$mdi:apple-keyboard-control$$'}
   - $$mdi:volume-off$$
   - $$mdi:apple-keyboard-option$$
+  - $$mdi:apple-keyboard-command$$
   - FUNC
-  - INT MUHENKAN
-  - {t: '$$mdi:keyboard-space$$', h: CURSOR}
-  - $$mdi:apple-keyboard-shift$$
+  - {t: INT5, h: CURSOR}
+  - $$mdi:keyboard-space$$
   - $$mdi:mouse-left-click-outline$$
-  - {t: '$$mdi:backspace$$', h: NUMBER}
-  - {t: '$$mdi:keyboard-space$$', h: CURSOR}
-  - INT HENKAN
+  - {t: '$$mdi:keyboard-space$$', h: NUMBER}
+  - {t: INT4, h: CURSOR}
   - {t: ;, s: ':'}
   - {t: '''', s: '"'}
+  - '0x89'
   CURSOR:
   - {t: '$$mdi:transfer$$', type: trans}
   - {t: '$$mdi:transfer$$', type: trans}
@@ -192,9 +192,9 @@ layers:
   - {t: '$$mdi:transfer$$', type: trans}
   - {type: held}
   - {t: '$$mdi:transfer$$', type: trans}
-  - {t: '$$mdi:transfer$$', type: trans}
   - ':'
   - '"'
+  - {t: '$$mdi:transfer$$', type: trans}
   FUNC:
   - {t: '$$mdi:transfer$$', type: trans}
   - F1
@@ -250,8 +250,8 @@ layers:
   - {t: '$$mdi:transfer$$', type: trans}
   - {t: '$$mdi:transfer$$', type: trans}
   - {t: '$$mdi:transfer$$', type: trans}
-  - {type: held}
   - {t: '$$mdi:transfer$$', type: trans}
+  - {type: held}
   - {t: '$$mdi:transfer$$', type: trans}
   - $$mdi:apple-keyboard-command$$
   - {t: '$$mdi:transfer$$', type: trans}
@@ -273,7 +273,7 @@ layers:
   - $$mdi:mouse-scroll-wheel$$
   - {t: '$$mdi:transfer$$', type: trans}
   - {t: '$$mdi:transfer$$', type: trans}
-  - SLEEP
+  - PWR
   - {t: '$$mdi:transfer$$', type: trans}
   - $$mdi:bluetooth-off$$
   - BT CLR ALL
