@@ -38,8 +38,8 @@ layers:
   - J
   - K
   - L
-  - {t: \, h: '$$mdi:apple-keyboard-shift$$', s: '|'}
   - {t: '$$mdi:keyboard-return$$', type: enter}
+  - {t: \, h: '$$mdi:apple-keyboard-shift$$', s: '|'}
   - $$mdi:apple-keyboard-control$$
   - Z
   - X
