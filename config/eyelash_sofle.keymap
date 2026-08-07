@@ -107,7 +107,7 @@
 
             bindings = <
                 &kp SPACE        // tap
-                &kp LSFT &mo 1   // hold
+                &kp LSHIFT &mo 1   // hold
             >;
         };
     };
