@@ -97,17 +97,27 @@
             tap-ms = <0>;
         };
 
+        shift_layer1: behavior_macro {
+            compatible = "zmk,behavior-macro";
+            label = "SHIFT_LAYER1";
+
+            // SHIFT 押下 → レイヤー1へ移動
+            bindings = <
+                &kp LSFT
+                &mo 1
+            >;
+        };
+
         lt_shft_spc: behavior_hold_tap {
             compatible = "zmk,behavior-hold-tap";
             label = "LT_SHFT_SPC";
-
+        
             tapping-term-ms = <200>;
-            quick-tap-ms = <0>;
             flavor = "balanced";
-
+        
             bindings = <
-                &kp SPACE        // tap
-                &kp LSHIFT &mo 1   // hold
+                &kp        // tap → SPACE
+                &shift_layer1  // hold → SHIFT + レイヤー1
             >;
         };
     };
