@@ -40,7 +40,7 @@ layers:
   - L
   - {t: '$$mdi:keyboard-return$$', type: enter}
   - {t: \, h: '$$mdi:apple-keyboard-shift$$', s: '|'}
-  - $$mdi:apple-keyboard-control$$
+  - $$mdi:apple-keyboard-shift$$
   - Z
   - X
   - C
@@ -54,7 +54,7 @@ layers:
   - {t: /, s: '?'}
   - {t: INTERNATIONAL 1, h: '$$mdi:apple-keyboard-control$$'}
   - $$mdi:volume-off$$
-  - $$mdi:apple-keyboard-command$$
+  - $$mdi:apple-keyboard-control$$
   - $$mdi:apple-keyboard-option$$
   - {t: INT5, h: NUMBER}
   - '&lt_shft_spc'
@@ -354,3 +354,5 @@ combos:
   k: F8
 - p: [33, 46]
   k: $$mdi:backspace-reverse-outline$$
+- p: [53, 54]
+  k: $$mdi:apple-keyboard-command$$
