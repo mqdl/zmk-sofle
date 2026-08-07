@@ -101,16 +101,14 @@
             compatible = "zmk,behavior-hold-tap";
             label = "LT_SHFT_SPC";
 
-            // タップ時（短押し）
             tapping-term-ms = <200>;
             quick-tap-ms = <0>;
             flavor = "balanced";
 
-            // 短押し → SPACE
-            tap = <&kp SPACE>;
-
-            // 長押し → SHIFT を押しつつレイヤー1へ移動
-            hold-trigger = <&kp LSFT &mo 1>;
+            bindings = <
+                &kp SPACE        // tap
+                &kp LSFT &mo 1   // hold
+            >;
         };
     };
 
