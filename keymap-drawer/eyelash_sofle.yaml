@@ -57,7 +57,7 @@ layers:
   - $$mdi:apple-keyboard-command$$
   - $$mdi:apple-keyboard-option$$
   - {t: INT5, h: NUMBER}
-  - '&lt_shft_sp'
+  - '&lt_shft_spc'
   - FUNC
   - $$mdi:mouse-left-click-outline$$
   - FUNC
