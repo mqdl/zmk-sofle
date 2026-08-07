@@ -421,3 +421,5 @@ combos:
   k: $$mdi:backspace-reverse-outline$$
 - p: [53, 54]
   k: $$mdi:apple-keyboard-command$$
+- p: [55, 61]
+  k: INT KATAKANAHIRAGANA
