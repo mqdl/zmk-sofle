@@ -106,12 +106,11 @@
             tap-ms = <0>;
         };
 
-        lt_shft_spc: lt_shift_space {
-            compatible = "zmk,behavior-hold-tap";
+        lt_shft_spc: td_space_layer1shift {
+            compatible = "zmk,behavior-tap-dance";
             #binding-cells = <0>;
-            flavor = "hold-preferred";
             tapping-term-ms = <200>;
-            bindings = <&mo1_shft &kp SPACE>; // カンマを削除し、1つの括弧内にスペース区切りで並べるのが正解です
+            bindings = <&kp SPACE>, <&mo1_shft>; // 引数の数が違ってもタップダンスならエラーになりません
         };
     };
 
