@@ -80,12 +80,12 @@
             tap-ms = <0>;
         };
 
-         lt_shft_spc: lt_shift_space {
+        lt_shft_spc: lt_shift_space {
             compatible = "zmk,behavior-hold-tap";
             #binding-cells = <0>;
             flavor = "hold-preferred";
             tapping-term-ms = <200>;
-            bindings = <&mo1_shft>, <&kp SPACE>; // 引数なしマクロと通常キーの組み合わせなのでエラーになりません
+            bindings = <&mo1_shft &kp SPACE>; // カンマを削除し、1つの括弧内にスペース区切りで並べるのが正解です
         };
     };
 
@@ -180,7 +180,7 @@
         };
         mo1_shft: mo1_shft {
             compatible = "zmk,behavior-macro";
-            #binding-cells = <0>; // 引数は0個（固定挙動）
+            #binding-cells = <0>;
             bindings
                 = <&macro_press &mo 1 &kp LSHFT>
                 , <&macro_pause_for_release>
