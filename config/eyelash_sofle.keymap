@@ -79,13 +79,31 @@
             #sensor-binding-cells = <0>;
             tap-ms = <0>;
         };
-        // タップで SPACE、長押しで レイヤー1移動 ＋ 左Shift
-        lt_shft_sp: lt_shift_space {
+        lm: layer_modifier {
+            compatible = "zmk,behavior-macro-two-param";
+            wait-ms = <0>;
+            tap-ms = <0>;
+            #binding-cells = <2>;
+            bindings
+                = <&macro_param_1to1>
+                , <&macro_press &mo MACRO_PLACEHOLDER>
+                , <&macro_param_2to1>
+                , <&macro_press &kp MACRO_PLACEHOLDER>
+                , <&macro_pause_for_release>
+                , <&macro_param_2to1>
+                , <&macro_release &kp MACRO_PLACEHOLDER>
+                , <&macro_param_1to1>
+                , <&macro_release &mo MACRO_PLACEHOLDER>
+                ;
+        };
+
+        // 2. タップで SPACE、長押しで レイヤー1 ＋ 左Shift
+        lt_shft_spc: lt_shift_space {
             compatible = "zmk,behavior-hold-tap";
             #binding-cells = <0>;
             flavor = "hold-preferred";
             tapping-term-ms = <200>;
-            bindings = <&lm 1 LSHFT>, <&kp SPACE>; // ここで直接 &lm を呼び出せます
+            bindings = <&lm 1 LSHFT>, <&kp SPACE>; // 移動先を「1」に、タップを「SPACE」に変更
         };
     };
 
@@ -189,7 +207,7 @@
 &kp TAB         &kp Q         &kp W         &kp E        &kp R        &kp T       &mkp MB4   &kp Y       &kp U        &kp I      &kp O         &kp P       &kp JP_LBRACKET
 &kp LSHFT       &kp A         &kp S         &kp D        &kp F        &kp G       &mkp MCLK  &kp H       &kp J        &kp K      &kp L         &kp ENTER   &mt LEFT_SHIFT JP_RBRACKET
 &kp LCTRL       &kp Z         &kp X         &kp C        &kp V        &kp B       &mkp RCLK  &kp N       &kp M        &kp COMMA  &kp DOT       &kp SLASH   &mt LEFT_CONTROL JP_BSLH
-&kp C_MUTE      &kp LEFT_GUI  &kp LEFT_ALT  &lt 2 INT5   &lt_shft_sp  &mo 3       &mkp LCLK  &mo 3       &lt 1 SPACE  &kp INT4   &kp SEMI      &kp JP_COLON
+&kp C_MUTE      &kp LEFT_GUI  &kp LEFT_ALT  &lt 2 INT5   &lt_shft_spc &mo 3       &mkp LCLK  &mo 3       &lt 1 SPACE  &kp INT4   &kp SEMI      &kp JP_COLON
             >;
 
             sensor-bindings = <&scroll_encoder>;
