@@ -80,17 +80,6 @@
 
             label = "SHIFT_MCLK";
         };
-
-        mo1_shft: mo1_shft {
-            compatible = "zmk,behavior-macro";
-            #binding-cells = <0>;
-            bindings =
-                <&macro_press>,
-                <&mo 1 &kp LSHFT>,
-                <&macro_pause_for_release>,
-                <&macro_release>,
-                <&mo 1 &kp LSHFT>;
-        };
     };
 
     behaviors {
@@ -108,12 +97,20 @@
             tap-ms = <0>;
         };
 
-        lt_shft_spc: td_space_layer1shift {
-            compatible = "zmk,behavior-tap-dance";
-            #binding-cells = <0>;
+        lt_shft_spc: behavior_hold_tap {
+            compatible = "zmk,behavior-hold-tap";
+            label = "LT_SHFT_SPC";
+
+            // タップ時（短押し）
             tapping-term-ms = <200>;
-            bindings = <&kp SPACE>, <&mo1_shft>;
- // 引数の数が違ってもタップダンスならエラーになりません
+            quick-tap-ms = <0>;
+            flavor = "balanced";
+
+            // 短押し → SPACE
+            tap = <&kp SPACE>;
+
+            // 長押し → SHIFT を押しつつレイヤー1へ移動
+            hold-trigger = <&kp LSFT &mo 1>;
         };
     };
 
