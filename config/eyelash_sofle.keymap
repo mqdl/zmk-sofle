@@ -175,6 +175,11 @@
             bindings = <&kp LEFT_GUI>;
             key-positions = <53 54>;
         };
+
+        kana {
+            bindings = <&kp INT_KATAKANAHIRAGANA>;
+            key-positions = <55 61>;
+        };
     };
 
     keymap {
